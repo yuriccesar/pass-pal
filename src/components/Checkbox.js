@@ -1,9 +1,9 @@
 import React from "react";
-import { Checkbox, FormControlLabel } from "@material-ui/core";
+import { Switch, FormGroup, FormControlLabel } from "@material-ui/core";
 import styled from "styled-components";
 
 const Label = styled(FormControlLabel)`
-  color: white;
+  color: white!important;
 `;
 
 function Checkboxes(props) {
@@ -35,24 +35,24 @@ function Checkboxes(props) {
   };
 
   return (
-    <>
+    <FormGroup>
       <Label
-        control={<Checkbox checked={uppercaseChecked} onChange={handleUppercaseChange} />}
+        control={<Switch checked={uppercaseChecked} onChange={handleUppercaseChange} />}
         label="Uppercase"
       />
       <Label
-        control={<Checkbox checked={lowercaseChecked} onChange={handleLowercaseChange} />}
+        control={<Switch checked={lowercaseChecked} onChange={handleLowercaseChange} />}
         label="Lowercase"
       />
       <Label
-        control={<Checkbox checked={numbersChecked} onChange={handleNumbersChange} />}
+        control={<Switch checked={numbersChecked} onChange={handleNumbersChange} />}
         label="Numbers"
       />
       <Label
-        control={<Checkbox checked={specialCharsChecked} onChange={handleSpecialCharsChange} />}
+        control={<Switch checked={specialCharsChecked} onChange={handleSpecialCharsChange} />}
         label="Special Characters"
       />
-    </>
+    </FormGroup>
   );
 }
 

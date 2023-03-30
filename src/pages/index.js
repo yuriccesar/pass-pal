@@ -1,33 +1,43 @@
 import React from "react";
-import {Link} from "gatsby"
-import Animation from "../components/Animation"
+import Animation from "../components/Animation";
+import App from "../components/App";
 import styled from "styled-components";
-import "../pages/index.css"
-
+import { Grid } from "@material-ui/core";
+import "../pages/index.css";
 
 const AppContainer = styled.div`
-  padding: 20px;
-  max-width: 1024px;
-  margin: 0 auto;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding: 40px;
 `;
 
-const Hero = styled.div`
-  background: black;
-  content: '';
-  height: 25vh;
-  padding: 0;
-  margin: 0;
+const Content = styled.div`
+content: '';
+color: white;
+padding: 40px;
+font-size: 26px;
+text-align: center;
+letter-spacing: 
 `
 
 function index() {
   return (
-    <>
-    <Hero />
-    <Animation/>
-    <AppContainer>  
-      <Link to = "generate">Generate</Link>
-    </AppContainer>
-    </>
+    <Grid container>
+      <Grid item xs={12} md={6}>
+        <AppContainer>
+          <Content>
+          PassPal is a Password Management Tool desinged to simplify security and protect your sensive data. It is the easiest way to share and manage passwords within your business.
+          </Content>
+        </AppContainer>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Animation />
+        <App />
+      </Grid>
+    </Grid>
   );
 }
 
