@@ -3,7 +3,7 @@ import { Switch, FormGroup, FormControlLabel } from "@material-ui/core";
 import styled from "styled-components";
 
 const Label = styled(FormControlLabel)`
-  color: white!important;
+  color: black!important;
 `;
 
 function Checkboxes(props) {

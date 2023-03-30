@@ -13,7 +13,7 @@ const StyledButton = styled(Button)`
 `;
 
 const AppContainer = styled.div`
-  background-color: teal;
+  background-color: #EEEE;
   padding: 20px;
   max-width: 1024px;
   margin: 0 auto;
