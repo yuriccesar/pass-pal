@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+  }
+  *:focus-within,
+  *:focus-visible,
+  *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  fieldset {
+    border: unset;
+  }
+  
