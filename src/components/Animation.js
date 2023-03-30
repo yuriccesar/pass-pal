@@ -99,7 +99,6 @@ export default function Animation() {
 
   return (
     <Container>
-      
       <IconContainer>
             {icons.map((icon, index) => (
               <Icon key={index} index={index} currentIndex={currentIndex}>

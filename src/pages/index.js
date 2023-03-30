@@ -10,9 +10,16 @@ const AppContainer = styled.div`
   height: 100vh;
   background: black;
   display: flex;
+  flex-direction: column;
   align-items:center;
   justify-content: center;
   padding: 40px;
+`;
+
+const GenerateContainer = styled.div`
+  height: 100vh;
+  background: #EEE;
+  padding: 10px;
 `;
 
 const Content = styled.div`
@@ -29,7 +36,6 @@ function index() {
     <Grid container>
       <Grid item xs={12} md={6}>
         <AppContainer>
-
           <Content>
           PassPal is a Password Management Tool desinged to simplify security and protect your sensive data. It is the easiest way to share and manage passwords within your business.
           </Content>
@@ -37,8 +43,9 @@ function index() {
         </AppContainer>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Animation />
+        <GenerateContainer>
         <App />
+        </GenerateContainer>
       </Grid>
     </Grid>
   );
