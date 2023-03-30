@@ -99,20 +99,14 @@ export default function Animation() {
 
   return (
     <Container>
-      {isAnimationComplete ? (
-        <AnimatedText>{randomString.split('').join(' ')}</AnimatedText>
-      ) : (
-        <>
-          <IconContainer>
+      
+      <IconContainer>
             {icons.map((icon, index) => (
               <Icon key={index} index={index} currentIndex={currentIndex}>
                 {icon}
               </Icon>
             ))}
           </IconContainer>
-          <Text>Encrypting</Text>
-        </>
-      )}
     </Container>
   );
 }

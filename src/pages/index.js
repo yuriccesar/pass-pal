@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Grid } from "@material-ui/core";
 import "../pages/index.css";
 
+
 const AppContainer = styled.div`
   height: 100vh;
   background: black;
@@ -28,9 +29,11 @@ function index() {
     <Grid container>
       <Grid item xs={12} md={6}>
         <AppContainer>
+
           <Content>
           PassPal is a Password Management Tool desinged to simplify security and protect your sensive data. It is the easiest way to share and manage passwords within your business.
           </Content>
+          <Animation />
         </AppContainer>
       </Grid>
       <Grid item xs={12} md={6}>
