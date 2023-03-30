@@ -10,10 +10,18 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
+    resolve: 'gatsby-plugin-federation',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": "./src/images/",
+      ssr: false, // Remotes will be fetched during SSG (SSR)
+      federationConfig: {
+        // A. For your Remote
+        name: 'passPal',
+        exposes: {
+          './Home': './src/pages/index.js',
+        },
+      }
     },
     __key: "images"
   }]
